@@ -1,0 +1,652 @@
+#flexbox {
+  /**
+	 * 1. fill available vertical space without resorting to "height: 100%", which
+	 *    yields undesirable results
+	 * 2. relatively positioned so ".NewView" descendents will fill correctly
+	 */
+}
+.sq-box {
+  /**
+   * Fill Box
+   * 1. on its own - fill available vertical space
+   * 2. as a child - flex to fill vertical space
+   */
+  /**
+   * Container Layout
+   * 1. create a flexible layout, either `column` or `row`
+   * 2. flex-column elements collapse horizontally, so we stretch them out again
+   */
+}
+.sq-box--fill {
+  height: 100%;
+}
+.sq-box--fill > .sq-box--fill {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  position: relative;
+}
+.sq-box--direction-column,
+.sq-box--direction-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  width: 100%;
+}
+.sq-box--direction-column > .sq-box--fill,
+.sq-box--direction-row > .sq-box--fill {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  position: relative;
+}
+.sq-box--direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.sq-box--direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.sq-box--direction-row > .sq-box--fill {
+  height: auto;
+  width: auto;
+}
+.sq-box--align-end {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.sq-box--align-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.sq-box--direction-column > .sq-box--align-center {
+  text-align: center;
+}
+.sq-box--align-start {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.sq-box--justified {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.sq-box--justify-end {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.sq-box--justify-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.sq-box--justify-start {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.sq-box--scrollable {
+  max-height: 100%;
+  overflow: scroll;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.sq-box--scrollable:before,
+.sq-box--scrollable:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+.sq-box--scrollable:before {
+  bottom: -1px;
+}
+.sq-box--scrollable:after {
+  top: -1px;
+}
+#flexbox {
+  /**
+	 * 1. fill available vertical space without resorting to "height: 100%", which
+	 *    yields undesirable results
+	 * 2. relatively positioned so ".NewView" descendents will fill correctly
+	 */
+}
+@-webkit-keyframes artificial {
+  from {
+    opacity: .99;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes artificial {
+  from {
+    opacity: .99;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes viewShowFromLeftEnter {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewShowFromLeftEnter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewShowFromLeftLeave {
+  to {
+    opacity: .75;
+    -webkit-transform: translate3d(25%, 0, 0);
+  }
+}
+@keyframes viewShowFromLeftLeave {
+  to {
+    opacity: .75;
+    transform: translate3d(25%, 0, 0);
+  }
+}
+@-webkit-keyframes viewShowFromRightEnter {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewShowFromRightEnter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewShowFromRightLeave {
+  to {
+    opacity: .75;
+    -webkit-transform: translate3d(-25%, 0, 0);
+  }
+}
+@keyframes viewShowFromRightLeave {
+  to {
+    opacity: .75;
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+@-webkit-keyframes viewShowFromTopEnter {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewShowFromTopEnter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewShowFromBottomEnter {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewShowFromBottomEnter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromLeftLeave {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes viewRevealFromLeftLeave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromLeftEnter {
+  from {
+    opacity: .75;
+    -webkit-transform: translate3d(25%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewRevealFromLeftEnter {
+  from {
+    opacity: .75;
+    transform: translate3d(25%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromRightLeave {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes viewRevealFromRightLeave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromRightEnter {
+  from {
+    opacity: .75;
+    -webkit-transform: translate3d(-25%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes viewRevealFromRightEnter {
+  from {
+    opacity: .75;
+    transform: translate3d(-25%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromTopLeave {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes viewRevealFromTopLeave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@-webkit-keyframes viewRevealFromBottomLeave {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes viewRevealFromBottomLeave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeExpand {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+  }
+}
+@keyframes fadeExpand {
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes fadeContract {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.35);
+  }
+}
+@keyframes fadeContract {
+  to {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: none;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .25;
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: .25;
+  }
+}
+.sq-transition {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
+.sq-transition-view {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f7;
+  line-height: 1;
+  overflow: hidden;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.sq-transition-instant-enter-active {
+  -webkit-animation: artificial 10ms;
+  -o-animation: artificial 10ms;
+  animation: artificial 10ms;
+}
+.sq-transition-instant-leave {
+  -webkit-animation: fadeOut 60ms;
+  -o-animation: fadeOut 60ms;
+  animation: fadeOut 60ms;
+}
+.sq-transition-fade-enter-active {
+  -webkit-animation: artificial 10ms;
+  -o-animation: artificial 10ms;
+  animation: artificial 10ms;
+}
+.sq-transition-fade-leave {
+  -webkit-animation: fadeOut 340ms;
+  -o-animation: fadeOut 340ms;
+  animation: fadeOut 340ms;
+}
+.sq-transition-fade-expand-enter-active {
+  -webkit-animation: artificial 10ms;
+  -o-animation: artificial 10ms;
+  animation: artificial 10ms;
+}
+.sq-transition-fade-expand-leave {
+  -webkit-animation: fadeExpand 340ms;
+  -o-animation: fadeExpand 340ms;
+  animation: fadeExpand 340ms;
+}
+.sq-transition-fade-contract-enter-active {
+  -webkit-animation: artificial 10ms;
+  -o-animation: artificial 10ms;
+  animation: artificial 10ms;
+}
+.sq-transition-fade-contract-leave {
+  -webkit-animation: fadeContract 340ms;
+  -o-animation: fadeContract 340ms;
+  animation: fadeContract 340ms;
+}
+.sq-transition-show-from-top-enter-active,
+.sq-transition-show-from-right-enter-active,
+.sq-transition-show-from-bottom-enter-active,
+.sq-transition-show-from-left-enter-active {
+  pointer-events: none;
+  z-index: 20;
+}
+.sq-transition-reveal-from-top-leave,
+.sq-transition-reveal-from-right-leave,
+.sq-transition-reveal-from-bottom-leave,
+.sq-transition-reveal-from-left-leave {
+  pointer-events: none;
+  z-index: 10;
+}
+.sq-transition-show-from-top-enter-active,
+.sq-transition-show-from-top-leave,
+.sq-transition-show-from-bottom-enter-active,
+.sq-transition-show-from-bottom-leave {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+}
+.sq-transition-show-from-left-enter-active,
+.sq-transition-show-from-left-leave,
+.sq-transition-show-from-right-enter-active,
+.sq-transition-show-from-right-leave {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+}
+.sq-transition-show-from-top-leave,
+.sq-transition-show-from-bottom-leave {
+  -webkit-animation-name: artificial;
+  animation-name: artificial;
+}
+.sq-transition-show-from-top-enter-active {
+  -webkit-animation-name: viewShowFromTopEnter;
+  animation-name: viewShowFromTopEnter;
+}
+.sq-transition-show-from-right-enter-active {
+  -webkit-animation-name: viewShowFromRightEnter;
+  animation-name: viewShowFromRightEnter;
+}
+.sq-transition-show-from-bottom-enter-active {
+  -webkit-animation-name: viewShowFromBottomEnter;
+  animation-name: viewShowFromBottomEnter;
+}
+.sq-transition-show-from-left-enter-active {
+  -webkit-animation-name: viewShowFromLeftEnter;
+  animation-name: viewShowFromLeftEnter;
+}
+.sq-transition-show-from-left-leave {
+  -webkit-animation-name: viewShowFromLeftLeave;
+  animation-name: viewShowFromLeftLeave;
+}
+.sq-transition-show-from-right-leave {
+  -webkit-animation-name: viewShowFromRightLeave;
+  animation-name: viewShowFromRightLeave;
+}
+.sq-transition-reveal-from-top-enter-active,
+.sq-transition-reveal-from-right-enter-active,
+.sq-transition-reveal-from-bottom-enter-active,
+.sq-transition-reveal-from-left-enter-active {
+  pointer-events: none;
+  z-index: 10;
+}
+.sq-transition-reveal-from-top-leave,
+.sq-transition-reveal-from-right-leave,
+.sq-transition-reveal-from-bottom-leave,
+.sq-transition-reveal-from-left-leave {
+  pointer-events: none;
+  z-index: 20;
+}
+.sq-transition-reveal-from-top-enter-active,
+.sq-transition-reveal-from-top-leave,
+.sq-transition-reveal-from-bottom-enter-active,
+.sq-transition-reveal-from-bottom-leave {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+}
+.sq-transition-reveal-from-left-enter-active,
+.sq-transition-reveal-from-left-leave,
+.sq-transition-reveal-from-right-enter-active,
+.sq-transition-reveal-from-right-leave {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+  animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+}
+.sq-transition-reveal-from-top-enter-active,
+.sq-transition-reveal-from-bottom-enter-active {
+  -webkit-animation-name: artificial;
+  animation-name: artificial;
+}
+.sq-transition-reveal-from-top-leave {
+  -webkit-animation-name: viewRevealFromTopLeave;
+  animation-name: viewRevealFromTopLeave;
+}
+.sq-transition-reveal-from-right-leave {
+  -webkit-animation-name: viewRevealFromRightLeave;
+  animation-name: viewRevealFromRightLeave;
+}
+.sq-transition-reveal-from-bottom-leave {
+  -webkit-animation-name: viewRevealFromBottomLeave;
+  animation-name: viewRevealFromBottomLeave;
+}
+.sq-transition-reveal-from-left-leave {
+  -webkit-animation-name: viewRevealFromLeftLeave;
+  animation-name: viewRevealFromLeftLeave;
+}
+.sq-transition-reveal-from-left-enter-active {
+  -webkit-animation-name: viewRevealFromLeftEnter;
+  animation-name: viewRevealFromLeftEnter;
+}
+.sq-transition-reveal-from-right-enter-active {
+  -webkit-animation-name: viewRevealFromRightEnter;
+  animation-name: viewRevealFromRightEnter;
+}
+#flexbox {
+  /**
+	 * 1. fill available vertical space without resorting to "height: 100%", which
+	 *    yields undesirable results
+	 * 2. relatively positioned so ".NewView" descendents will fill correctly
+	 */
+}
+.sq-ptr {
+  position: relative;
+  background: #333;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sq-ptr-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  height: 50px;
+}
+.sq-ptr-content {
+  background: #fff;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
