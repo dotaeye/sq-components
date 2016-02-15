@@ -1,1 +1,1 @@
-module.exports = require('./lib/sq-components');
+module.exports = require('./src/sq-components');

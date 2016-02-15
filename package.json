@@ -1,6 +1,6 @@
 {
   "name": "sq-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react components develop by sq",
   "main": "index.js",
   "dependencies": {
@@ -8,9 +8,9 @@
     "classnames": "^2.2.3",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "sq-box": "^1.0.3",
-    "sq-pulltorefresh": "^1.0.3",
-    "sq-transition": "^1.0.3"
+    "sq-box": "^1.0.4",
+    "sq-pulltorefresh": "^1.0.4",
+    "sq-transition": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
