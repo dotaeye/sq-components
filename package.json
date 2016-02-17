@@ -1,6 +1,6 @@
 {
   "name": "sq-components",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "react components develop by sq",
   "main": "index.js",
   "dependencies": {
@@ -8,9 +8,9 @@
     "classnames": "^2.2.3",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "sq-box": "^1.0.4",
-    "sq-pulltorefresh": "^1.0.4",
-    "sq-transition": "^1.0.4"
+    "sq-box": "^1.0.7",
+    "sq-pulltorefresh": "^1.0.6",
+    "sq-transition": "^1.0.6"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
@@ -22,6 +22,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
     "grunt-concurrent": "^2.1.0",
     "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-copy": "^0.8.2",

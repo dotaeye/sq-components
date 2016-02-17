@@ -34,6 +34,19 @@ module.exports = function (grunt) {
                 }
             }
         },
+        babel: {
+            options: babelLoaderQuery,
+            dist: {
+               files: [
+                    {
+                        expand: true,
+                        cwd: 'src/',
+                        src: ['*.js','**/*.js'],
+                        dest: 'lib/'
+                    }
+                ]
+            }
+        },
         webpack: {
         	dev: {
    				resolve: {
@@ -53,29 +66,39 @@ module.exports = function (grunt) {
                 }
         	},
         	lib: {
-   				resolve: {
+                resolve: {
                     extensions: ['', '.js', '.jsx']
                 },
                 entry: './src/sq-components.js',
                 output: {
+                    library :'sq-components',
+                    libraryTarget :'umd',
                     path: './lib',
                     filename: 'sq-components.js'
                 },
                 module:{
-                	 loaders: [{
+                     loaders: [{
                             test: /\.jsx?$/,
                             exclude: /node_modules/,
                             loaders: ['babel?' + JSON.stringify(babelLoaderQuery)]
-                        }
-                    ]
+                     }]
                 },
-                externals: {
-                    react: 'React',
-                    'react-dom': 'ReactDOM',
-                    'classnames': 'classnames',
-                    blacklist: 'blacklist'
-                }
-        	},
+                externals:[{
+                  'react': {
+                    root: 'React',
+                    commonjs2: 'react',
+                    commonjs: 'react',
+                    amd: 'react'
+                  }
+                },{
+                    'react-dom': {
+                    root: 'ReactDOM',
+                    commonjs2: 'react-dom',
+                    commonjs: 'react-dom',
+                    amd: 'react-dom'
+                  }
+                }]
+            },
         	prod: {
 				resolve: {
                     extensions: ['', '.js', '.jsx']
@@ -107,5 +130,5 @@ module.exports = function (grunt) {
         	}
         }
     });
-	grunt.registerTask('default', ['clean', 'less:dev','less:prod','webpack:lib','webpack:dev','webpack:prod']);
+	grunt.registerTask('default', ['clean', 'less:dev','less:prod','babel','webpack:dev','webpack:prod']);
 }
