@@ -1,6 +1,6 @@
 {
   "name": "sq-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "react components develop by sq",
   "main": "index.js",
   "dependencies": {
@@ -8,7 +8,9 @@
     "classnames": "^2.2.3",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "sq-box": "^1.0.7",
+    "react-motion": "^0.4.2",
+    "react-swipeable-views": "^0.4.7",
+    "sq-box": "^1.0.8",
     "sq-pulltorefresh": "^1.0.6",
     "sq-transition": "^1.0.6"
   },
